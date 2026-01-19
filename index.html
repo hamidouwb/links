@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links | Gruvbox Theme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Gruvbox Dark Palette */
+            --bg-hard: #1d2021;
+            --bg-normal: #282828;
+            --fg: #ebdbb2;
+            --gray: #928374;
+            --red: #cc241d;
+            --green: #98971a;
+            --yellow: #d79921;
+            --blue: #458588;
+            --purple: #b16286;
+            --aqua: #689d6a;
+            --orange: #fe8019; /* Bright Orange for accents */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-normal);
+            color: var(--fg);
+            font-family: 'Courier New', Courier, monospace; /* Monospace for IDE feel */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Profile Section */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--gray); /* Placeholder color */
+            margin: 0 auto 15px;
+            border: 2px solid var(--fg);
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--orange);
+        }
+
+        p.bio {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        /* Links Section */
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background-color: var(--bg-hard);
+            color: var(--fg);
+            padding: 15px;
+            border: 2px solid var(--gray);
+            border-radius: 8px; /* Slightly rounded for softness */
+            transition: all 0.2s ease;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .link-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Hover Effects */
+        .link-btn:hover {
+            background-color: var(--bg-normal);
+            border-color: var(--orange);
+            color: var(--orange);
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px var(--orange); /* Retro shadow effect */
+        }
+
+        /* Specific Brand Colors on Hover (Optional: Remove if you want strict Gruvbox) */
+        .link-btn.blog:hover { border-color: var(--green); color: var(--green); box-shadow: 4px 4px 0px var(--green); } .link-btn.youtube:hover { border-color: var(--red); color: var(--red); box-shadow: 4px 4px 0px var(--red); }
+        .link-btn.twitch:hover { border-color: var(--purple); color: var(--purple); box-shadow: 4px 4px 0px var(--purple); }
+        .link-btn.tiktok:hover { border-color: var(--aqua); color: var(--aqua); box-shadow: 4px 4px 0px var(--aqua); }
+        .link-btn.twitter:hover { border-color: var(--blue); color: var(--blue); box-shadow: 4px 4px 0px var(--blue); }
+        .link-btn.instagram:hover { border-color: var(--yellow); color: var(--yellow); box-shadow: 4px 4px 0px var(--yellow); }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="./images/youtubeProfile.png" alt="Profile Picture" class="profile-img">
+        
+        <h1>@hamidouwb</h1>
+        <p class="bio">Developer | Content Creator</p>
+
+        <div class="link-list">
+            <a href="https://www.hamidouwb.com" class="link-btn blog" target="_blank">
+              <i class="fa-solid fa-pen-nib"></i> My Blog
+            </a>
+            <a href="https://youtube.com/@hamidouwb" class="link-btn youtube" target="_blank">
+                <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+
+            <a href="https://www.tiktok.com/@hamidouwb" class="link-btn tiktok" target="_blank">
+                <i class="fa-brands fa-tiktok"></i> TikTok
+            </a>
+
+            <a href="https://www.instagram.com/hamidouwb" class="link-btn instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+
+            <a href="https://x.com/hamidouwb" class="link-btn twitter" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i> X (Twitter)
+            </a>
+
+            <a href="https://www.twitch.tv/hamidouwb" class="link-btn twitch" target="_blank">
+                <i class="fa-brands fa-twitch"></i> Twitch
+            </a>
+        </div>
+
+        <footer>
+            Built with Gruvbox
+        </footer>
+    </div>
+
+</body>
+</html>
